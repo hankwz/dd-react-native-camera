@@ -8,7 +8,7 @@ import {TrackingConsent} from '@datadog/mobile-react-native';
 import {Navigation} from 'react-native-navigation';
 
 console.log('Starting Application with navigation library: ' + navigationLib);
-if (navigationLib == 'react-navigation') {
+// if (navigationLib == 'react-navigation') {
   AppRegistry.registerComponent(appName, () => App);
   // this is a hack. we need to set root of `react-native-navigation`,
   // because native screen belongs to it. otherwise we will have blank screen
@@ -32,7 +32,7 @@ if (navigationLib == 'react-navigation') {
       },
     });
   });
-} else if (navigationLib == 'react-native-navigation') {
-  initializeDatadog(TrackingConsent.GRANTED);
-  startReactNativeNavigation();
-}
+// } else if (navigationLib == 'react-native-navigation') {
+//   initializeDatadog(TrackingConsent.GRANTED);
+//   startReactNativeNavigation();
+// }

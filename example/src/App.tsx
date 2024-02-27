@@ -12,6 +12,7 @@ import { Route } from "@react-navigation/native";
 import { NestedNavigator } from './screens/NestedNavigator/NestedNavigator';
 import { getDatadogConfig, onDatadogInitialization } from './ddUtils';
 import { TrackingConsent } from '@datadog/mobile-react-native';
+import { QRScannerScreen } from './screens/QRScannerScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,6 +32,7 @@ export default function App() {
           tabBarIcon: () => null
         }}>
           <Tab.Screen name="Home" component={MainScreen} />
+          <Tab.Screen name="QRScanner" component={QRScannerScreen} />
           <Tab.Screen name="Error" component={ErrorScreen} />
           <Tab.Screen name="About" component={AboutScreen} />
           <Tab.Screen name="Nested" component={NestedNavigator} />
